@@ -6,6 +6,7 @@
 @Email   : panziqiang007@qq.com
 @Software: PyCharm
 微信读书PC端 时长
+chrome-version 84.0.4147.89
 """
 import datetime
 import json
