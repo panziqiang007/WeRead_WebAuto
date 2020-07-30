@@ -60,7 +60,7 @@ class DingTalk():
                 "text": content},  # markdown格式的消息
             "at": {
                 "atMobiles": [
-                    "17671881176"  # 被@人的手机号（在text内容里要有@手机号）
+                    "13800000000"  # 被@人的手机号（在text内容里要有@手机号）
                 ],
                 "isAtAll": False  # 是否@所有人
             }
@@ -69,7 +69,7 @@ class DingTalk():
         header_dict = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36',
             "Content-Type": "application/json"}
-        url = 'https://oapi.dingtalk.com/robot/send?access_token=5994904b5f23bd88d7b252888ce823a3327a250fe6a9898bf3b2bc62da557aef'
+        url = '你自己的钉钉回调url地址'
         res = requests.post(url=url, data=textmod, headers=header_dict)
         res = res.json()
         if res['errmsg'] == "ok":
@@ -210,7 +210,7 @@ def get_file_data():
 if __name__ == '__main__':
     dd = DingTalk()
     try:
-        content = "#### @17671881176 \n 开始读书啦！"
+        content = "#### @1380000000 \n 开始读书啦！"
         dd.send_msg(content)
         res = get_file_data()
         sm = Selenium_()
@@ -221,5 +221,5 @@ if __name__ == '__main__':
         # sm.log.info(f"结束读书：{sm.get_now_time()}")
         # sleep(300000)
     except Exception as e:
-        content = "#### @17671881176 \n 程序挂掉啦！"
+        content = "#### @1380000000 \n 程序挂掉啦！"
         dd.send_msg(content)
