@@ -1,7 +1,10 @@
 # WeRead_WebAuto
 Web版微信自动读书
 
-程序运行后用微信扫一扫登录
+chrome-version 84~
+运行方式：python weread_automation.py
+
+程序运行后网站打开用微信扫一扫登录
 
 配合钉钉url回调地址
 
